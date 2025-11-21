@@ -22,7 +22,8 @@ from jax.extend import core
 from jax.interpreters import ad, batching, mlir, xla
 
 # from jax.lib import xla_client
-from jaxlib.hlo_helpers import custom_call
+# from jaxlib.hlo_helpers import custom_call
+from jax._src.interpreters.mlir import custom_call
 
 
 # Public facing interface

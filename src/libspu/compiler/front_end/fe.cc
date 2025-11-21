@@ -89,6 +89,8 @@ mlir::OwningOpRef<mlir::ModuleOp> FE::doit(const CompilationSource &source) {
 
   // Run pipeline
   mlir::PassManager pm(ctx_->getMLIRContext());
+  pm.getContext()->disableMultithreading();
+  pm.enableIRPrintingToFileTree();
   buildFrontEndPipeline(&pm, input_vis_str);
 
   ctx_->setupPrettyPrintConfigurations(&pm);

@@ -21,7 +21,9 @@ import numpy as np
 from jax._src.core import ShapedArray
 from jax.extend import core
 from jax.interpreters import ad, batching, mlir, xla
-from jaxlib.hlo_helpers import custom_call
+
+# from jaxlib.hlo_helpers import custom_call
+from jax._src.interpreters.mlir import custom_call
 
 
 # Public facing interface
